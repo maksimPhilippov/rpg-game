@@ -21,5 +21,5 @@ add_subdirectory(vendored/SDL EXCLUDE_FROM_ALL)
 # Add the executable target
 add_executable(hello)
 target_sources(hello 
-PRIVATE main.cxx)
+PRIVATE src/frontend/main.cxx)
 target_link_libraries(hello PRIVATE SDL3::SDL3)

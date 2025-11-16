@@ -4,14 +4,14 @@
 #include <SDL3/SDL_main.h>
 
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char **argv) {
-    const int windowHeight = 100;
-    const int windowWidth = 100;
+    const int windowHeight = 400;
+    const int windowWidth = 400;
 
     if (!SDL_Init(SDL_INIT_VIDEO)) {
         return SDL_APP_FAILURE;
     }
 
-    if (!SDL_CreateWindow("РПГ гаме", windowWidth, windowHeight, SDL_WINDOW_RESIZABLE | SDL_WINDOW_TRANSPARENT | SDL_WINDOW_FULLSCREEN)) {
+    if (!SDL_CreateWindow("Rpg game", windowWidth, windowHeight, SDL_WINDOW_RESIZABLE | SDL_WINDOW_VULKAN)) {
         return SDL_APP_FAILURE;
     }
 
